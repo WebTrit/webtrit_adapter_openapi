@@ -1,0 +1,1 @@
+# WebTrit Adapter OpenAPI
