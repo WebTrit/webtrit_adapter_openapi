@@ -150,7 +150,7 @@
         "title": "SessionOtpVerifyRequest",
         "type": "object"
       },
-      "ProvisionSessionAutoUnauthorizedErrorResponse": {
+      "SessionAutoProvisionUnauthorizedErrorResponse": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorResponse"
@@ -165,7 +165,7 @@
             "type": "object"
           }
         ],
-        "title": "ProvisionSessionAutoUnauthorizedErrorResponse"
+        "title": "SessionAutoProvisionUnauthorizedErrorResponse"
       },
       "UpdateSessionUnprocessableEntityErrorResponse": {
         "allOf": [
@@ -712,7 +712,7 @@
         "title": "Pagination",
         "type": "object"
       },
-      "ProvisionSessionAutoUnprocessableEntityErrorResponse": {
+      "SessionAutoProvisionUnprocessableEntityErrorResponse": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorResponse"
@@ -728,9 +728,9 @@
           }
         ],
         "description": "`code` field values that are defined (but can be expanded) are:\n- `validation_error`",
-        "title": "ProvisionSessionAutoUnprocessableEntityErrorResponse"
+        "title": "SessionAutoProvisionUnprocessableEntityErrorResponse"
       },
-      "ProvisionSessionAutoInternalServerErrorErrorResponse": {
+      "SessionAutoProvisionInternalServerErrorErrorResponse": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorResponse"
@@ -745,7 +745,7 @@
             "type": "object"
           }
         ],
-        "title": "ProvisionSessionAutoInternalServerErrorErrorResponse"
+        "title": "SessionAutoProvisionInternalServerErrorErrorResponse"
       },
       "GetUserRecordingUnauthorizedErrorResponse": {
         "allOf": [
@@ -818,7 +818,7 @@
         "title": "SipInfo",
         "type": "object"
       },
-      "ProvisionSessionAutoNotImplementedErrorResponse": {
+      "SessionAutoProvisionNotImplementedErrorResponse": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ErrorResponse"
@@ -833,7 +833,7 @@
             "type": "object"
           }
         ],
-        "title": "ProvisionSessionAutoNotImplementedErrorResponse"
+        "title": "SessionAutoProvisionNotImplementedErrorResponse"
       },
       "GetUserContactListInternalServerErrorErrorResponse": {
         "allOf": [
@@ -1697,7 +1697,7 @@
       "post": {
         "callbacks": {},
         "description": "This is an alternative sign-in method for the **Adaptee** that support token-based provision.\n\nThe configure token for auto provision is transferred to the user in any alternative way.\nThe **Adaptee** side verifies the transferred provisioning token and returns data for\nuser authorization.\n",
-        "operationId": "provisionSessionAuto",
+        "operationId": "sessionAutoProvision",
         "parameters": [
           {
             "$ref": "#/components/parameters/TenantID"
@@ -1729,7 +1729,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProvisionSessionAutoUnauthorizedErrorResponse"
+                  "$ref": "#/components/schemas/SessionAutoProvisionUnauthorizedErrorResponse"
                 }
               }
             },
@@ -1739,7 +1739,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProvisionSessionAutoUnprocessableEntityErrorResponse"
+                  "$ref": "#/components/schemas/SessionAutoProvisionUnprocessableEntityErrorResponse"
                 }
               }
             },
@@ -1749,7 +1749,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProvisionSessionAutoInternalServerErrorErrorResponse"
+                  "$ref": "#/components/schemas/SessionAutoProvisionInternalServerErrorErrorResponse"
                 }
               }
             },
@@ -1759,7 +1759,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProvisionSessionAutoNotImplementedErrorResponse"
+                  "$ref": "#/components/schemas/SessionAutoProvisionNotImplementedErrorResponse"
                 }
               }
             },
