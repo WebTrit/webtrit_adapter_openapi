@@ -47,7 +47,7 @@
       "ErrorResponse": {
         "properties": {
           "code": {
-            "description": "Unique error code identifier.",
+            "description": "Additional error code identifier to help better handle\nsituations that fall within the same HTTP error code.\nE.g. a request to login is denied with 401 HTTP error\nbut the code will additionally indicate the specific\nreason: username / password are incorrect or the user's\naccount has been administratively blocked. This code will\nbe passed to the client, so the app can show a proper message on UI.",
             "type": "string"
           },
           "details": {
