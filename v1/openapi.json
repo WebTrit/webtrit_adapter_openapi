@@ -1103,7 +1103,7 @@
           "recording_id": {
             "$ref": "#/components/schemas/CallRecordingId"
           },
-          "status": {
+          "connect_status": {
             "description": "Indicates the call status.",
             "enum": [
               "accepted",
