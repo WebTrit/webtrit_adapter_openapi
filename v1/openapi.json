@@ -1401,6 +1401,193 @@
           }
         ],
         "title": "CreateSessionOtpNotFoundErrorResponse"
+      },
+      "DeleteSessionNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "DeleteSessionNotImplementedErrorResponse"
+      },
+      "UpdateSessionNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "UpdateSessionNotImplementedErrorResponse"
+      },
+      "CreateSessionNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "CreateSessionNotImplementedErrorResponse"
+      },
+      "CreateSessionOtpNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "CreateSessionOtpNotImplementedErrorResponse"
+      },                  
+      "VerifySessionOtpNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "VerifySessionOtpNotImplementedErrorResponse"
+      },
+      "DeleteUserInfoNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "DeleteUserInfoNotImplementedErrorResponse"
+      },
+      "GetUserInfoNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "GetUserInfoNotImplementedErrorResponse"
+      },            
+      "CreateUserNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "CreateUserNotImplementedErrorResponse"
+      },
+      "GetUserContactListNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "GetUserContactListNotImplementedErrorResponse"
+      },
+      "GetUserHistoryListNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "GetUserHistoryListNotImplementedErrorResponse"
+      },
+      "GetUserRecordingNotImplementedErrorResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponse"
+          },
+          {
+            "properties": {
+              "code": {
+                "description": "`code` field values that are defined (but can be expanded) are:\n- `functionality_not_implemented`",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "title": "GetUserRecordingNotImplementedErrorResponse"
       }
     },
     "securitySchemes": {
@@ -1547,7 +1734,17 @@
               }
             },
             "description": "Internal Server Error.\n"
-          }
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteSessionNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
+          }          
         },
         "security": [
           {
@@ -1619,6 +1816,16 @@
               }
             },
             "description": "Internal Server Error.\n"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateSessionNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
           }
         },
         "summary": "Refresh user's API session and retrieve new tokens",
@@ -1686,7 +1893,17 @@
               }
             },
             "description": "Internal Server Error.\n"
-          }
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSessionNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
+          }          
         },
         "summary": "Sign in the user",
         "tags": [
@@ -1834,7 +2051,17 @@
               }
             },
             "description": "Internal Server Error.\n"
-          }
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSessionOtpNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
+          }          
         },
         "summary": "Generate and send an OTP to the user",
         "tags": [
@@ -1913,6 +2140,16 @@
               }
             },
             "description": "Internal Server Error.\n"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VerifySessionOtpNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
           }
         },
         "summary": "Verify the OTP and sign in the user",
@@ -2002,7 +2239,17 @@
               }
             },
             "description": "Internal Server Error.\n"
-          }
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteUserInfoNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
+          }          
         },
         "security": [
           {
@@ -2073,6 +2320,16 @@
               }
             },
             "description": "Internal Server Error.\n"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserInfoNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
           }
         },
         "security": [
@@ -2145,6 +2402,16 @@
               }
             },
             "description": "Internal Server Error.\n"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateUserNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
           }
         },
         "summary": "Create a new user",
@@ -2214,6 +2481,16 @@
               }
             },
             "description": "Internal Server Error.\n"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserContactListNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
           }
         },
         "security": [
@@ -2329,6 +2606,16 @@
               }
             },
             "description": "Internal Server Error.\n"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserHistoryListNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
           }
         },
         "security": [
@@ -2416,6 +2703,16 @@
               }
             },
             "description": "Internal Server Error.\n"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserRecordingNotImplementedErrorResponse"
+                }
+              }
+            },
+            "description": "Not Implemented: The requested functionality is not supported.\n"
           }
         },
         "security": [
